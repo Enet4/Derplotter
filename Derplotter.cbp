@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Derplotter" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="libDerplotter" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="libDerplotter" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++0x" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="TC">
+				<Option output="TC/TC" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="TC" />
+				<Option object_output="obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="`sdl-config --cflags`" />
+					<Add option="-DDerplotter_DEBUG" />
+					<Add directory="/home/enet4/Projects/Derplotter/" />
+				</Compiler>
+				<Linker>
+					<Add option="`sdl-config --libs`" />
+				</Linker>
+			</Target>
+			<Target title="TC_opt">
+				<Option output="TC/TC" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="TC" />
+				<Option object_output="obj/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++0x" />
+					<Add option="`sdl-config --cflags`" />
+					<Add directory="/home/enet4/Projects/Derplotter/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`sdl-config --libs`" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="Derplotter.h" />
+		<Unit filename="DisplayBuffer.cpp" />
+		<Unit filename="DisplayBuffer.h" />
+		<Unit filename="Mat4x4f.cpp" />
+		<Unit filename="Mat4x4f.h" />
+		<Unit filename="MathUtils.cpp" />
+		<Unit filename="MathUtils.h" />
+		<Unit filename="Region2i.cpp" />
+		<Unit filename="Region2i.h" />
+		<Unit filename="Renderer.cpp" />
+		<Unit filename="Renderer.h" />
+		<Unit filename="RendererOps.cpp" />
+		<Unit filename="RendererOps.h" />
+		<Unit filename="RendererProgram.cpp" />
+		<Unit filename="RendererProgram.h" />
+		<Unit filename="TC/TC.cpp">
+			<Option target="TC" />
+			<Option target="TC_opt" />
+		</Unit>
+		<Unit filename="Vector4f.cpp" />
+		<Unit filename="Vector4f.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
