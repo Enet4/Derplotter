@@ -58,12 +58,16 @@
  */
 
 #pragma once
+#ifndef DERPLOTTER_MAIN_H
+#define DERPLOTTER_MAIN_H 1
 
-// derplot::math
+// derplot::math (utility libraries)
 #include "MathUtils.h"
 #include "Vector4f.h"
 #include "Mat4x4f.h"
 #include "Region2i.h"
 
-// derplot
+// derplot (base rendering component)
 #include "Renderer.h"
+
+#endif
